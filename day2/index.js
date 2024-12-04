@@ -1,8 +1,7 @@
-import fs from "fs"
-import path from "path"
 import { isSafeReport } from "./isSafeReport.js"
+import { getDataFromTextFile } from "../getDataFromTextFile.js"
 
-const data = fs.readFileSync(path.resolve("day2/input.txt"), "utf8")
+const data = getDataFromTextFile(2)
 const reports = data.split("\n")
 
 // PUZZLE 1

@@ -1,7 +1,6 @@
-import fs from "fs"
-import path from "path"
+import { getDataFromTextFile } from "../getDataFromTextFile.js"
 
-const data = fs.readFileSync(path.resolve("day1/input.txt"), "utf8")
+const data = getDataFromTextFile(1)
 const dataArr = data.split("\n")
 
 // PUZZLE 1
