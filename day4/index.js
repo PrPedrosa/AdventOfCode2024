@@ -16,6 +16,7 @@ const matchesPuzzle1 = ["XMAS", "SAMX"]
 
 const getHorizontalXMAS = arr => {
   let XMAS = 0
+
   arr.forEach(str => {
     for (let i = 0; i < str.length; i++) {
       const relevantString = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
@@ -49,6 +50,7 @@ const getVerticalXMAS = arr => {
 
 const getDiagonalXMAS = arr => {
   let XMAS = 0
+
   arr.forEach((str, i) => {
     for (let j = 0; j < str.length; j++) {
       // Check both diagonal directions
@@ -90,7 +92,7 @@ console.log("PUZZLE 1 result is:", numOfXMAS)
   ) */
 
 const findCrossingX_MAS = arr => {
-  let XMAS = 0
+  let X_MAS = 0
   const matchesPuzzle2 = ["MAS", "SAM"]
 
   arr.forEach((str, i) => {
@@ -109,11 +111,11 @@ const findCrossingX_MAS = arr => {
       const relevantString2 = `${pattern[2]}${pattern[3]}${pattern[4]}`
 
       if (matchesPuzzle2.includes(relevantString1) && matchesPuzzle2.includes(relevantString2)) {
-        XMAS++
+        X_MAS++
       }
     }
   })
-  return XMAS
+  return X_MAS
 }
 
 const resultPuzzle2 = findCrossingX_MAS(dataArrPuzzle2)
