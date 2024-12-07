@@ -10,6 +10,7 @@ const dataArr = getDataFromTextFile(7).split("\n")
 // Gives all permutations of the arr
 // if arrLength was bigger probably turn permutate() into a generator function?
 // or maybe incorporate calculate() inside permutate() so that we dont have to create the giant results array inside permutate()?
+// Really cool solution here https://github.com/sehyod/aoc-2024/blob/main/day7/part2.ts
 const permutateCache = { puzzle1Id: {}, puzzle2Id: {} }
 const permutate = (arrLenght, arr, puzzleId) => {
   const results = []
